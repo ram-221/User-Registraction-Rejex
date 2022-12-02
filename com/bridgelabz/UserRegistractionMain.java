@@ -8,7 +8,8 @@ public class UserRegistractionMain {
 		UserRegistraction user = new UserRegistraction();
 		Scanner scan = new Scanner(System.in);
 		System.out.println("\nEnter 1 to Validate First Name: \nEnter 2 to Validate Last Name :"
-				+ "\nEnter 3 to Validate Email Address : \nEnter 4 to Validate PassWord");
+				+ "\nEnter 3 to Validate Email Address : \nEnter 4 to Validate PassWord: "
+				+ "\nEnter 5 to Validate Password: ");
 		int choice = scan.nextInt();
 		switch(choice) {
 		case 1:
@@ -27,6 +28,9 @@ public class UserRegistractionMain {
 			user.validPhoneNumber();
 			break;
 			
+		case 5:
+			user.rull_1_Password();
+			break;
 			
 			default:
 				System.out.println("Invalid Enter");

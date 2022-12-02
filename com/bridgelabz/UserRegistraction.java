@@ -75,5 +75,23 @@ public class UserRegistraction {
 			System.out.println("Phone Number is InValid");
 		}
 	}
+	
+	/* UC 5*/
+	
+	public void rull_1_Password() {
+		System.out.println("Enter the Password");
+		String rull1 = scan.nextLine();
+		String regex = "[a-z]{8,}";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher m = pattern.matcher(rull1);
+		boolean b = m.matches();
+		
+		if(b) {
+			System.out.println("Password is Valid");
+		}
+		else {
+			System.out.println("Password is InValid");
+		}
+	}
 
 }
