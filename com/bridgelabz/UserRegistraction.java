@@ -93,5 +93,22 @@ public class UserRegistraction {
 			System.out.println("Password is InValid");
 		}
 	}
+	
+	/* UC 6*/
+	public void rull_2_Password() {
+		System.out.println("Enter the Rull 2 Password");
+		String rull2 = scan.nextLine();
+		String regex = "[A-Z]+[a-z]{7,}";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher m = pattern.matcher(rull2);
+		boolean b = m.matches();
+		
+		if(b) {
+			System.out.println("Password is Valid");
+		}
+		else {
+			System.out.println("Password is Invalid");
+		}
+	}
 
 }
