@@ -58,5 +58,22 @@ public class UserRegistraction {
 			System.out.println("Email Address InValid");
 		}
 	}
+	
+	/* UC 4*/
+	public void validPhoneNumber() {
+		System.out.println("Enter Phone Number");
+		String pNumber = scan.nextLine();
+		String pRegex = "^[1-9]{2}\\s[6-9]*[0-9]{9}";
+		Pattern p = Pattern.compile(pRegex);
+		Matcher m = p.matcher(pNumber);
+		boolean b = m.matches();
+		
+		if(b) {
+			System.out.println("Phone Number is Valid");
+		}
+		else {
+			System.out.println("Phone Number is InValid");
+		}
+	}
 
 }
