@@ -41,5 +41,22 @@ public class UserRegistraction {
 			System.out.println("Last Name is InValid");
 		}
 	}
+	
+	/* UC 3*/
+	public  void validEmailAddress() {
+		System.out.println("Enter the Email Address :");
+		String lName = scan.next();
+		String lRegex ="abc[a-zA-Z0-9]*[@]bl[.]co[a-zA-Z0-9]*";
+		Pattern p = Pattern.compile(lRegex);
+		Matcher m = p.matcher(lName);
+		boolean b = m.matches();
+		
+		if(b) {
+			System.out.println("Email Address is Valid");
+		}
+		else {
+			System.out.println("Email Address InValid");
+		}
+	}
 
 }
