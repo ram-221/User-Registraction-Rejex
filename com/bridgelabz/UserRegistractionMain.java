@@ -10,7 +10,8 @@ public class UserRegistractionMain {
 		System.out.println("\nEnter 1 to Validate First Name: \nEnter 2 to Validate Last Name :"
 				+ "\nEnter 3 to Validate Email Address : \nEnter 4 to Validate PassWord: "
 				+ "\nEnter 5 to Validate Password: \nEnter 6 to Validate Password :"
-				+ "\nEnter 7 to Validate Password: \nEnter 8 to Validate Password :");
+				+ "\nEnter 7 to Validate Password: \nEnter 8 to Validate Password :"
+				+ "\nEnter 9 t0 Validate Password:");
 		int choice = scan.nextInt();
 		switch(choice) {
 		case 1:
@@ -45,6 +46,10 @@ public class UserRegistractionMain {
 			user.rull_4_Password();
 			break;
 					
+		case 9:
+			user.sampleEmailsToTest();
+			break;
+
 			default:
 				System.out.println("Invalid Enter");
 		}

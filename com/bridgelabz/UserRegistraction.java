@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class UserRegistraction {
 
 	/* UC 1*/
-	
+
 	Scanner scan = new Scanner(System.in);
 	public void validFirstName() {
 		System.out.println("Enter the First Name :");
@@ -24,7 +24,7 @@ public class UserRegistraction {
 			System.out.println("First Name is InValid");
 		}
 	}
-	
+
 	/* UC 2*/
 	public void validLastName() {
 		System.out.println("Enter the Last Name :");
@@ -33,7 +33,7 @@ public class UserRegistraction {
 		Pattern p = Pattern.compile(lRegex);
 		Matcher m = p.matcher(lName);
 		boolean b = m.matches();
-		
+
 		if(b) {
 			System.out.println("Last Name is Valid");
 		}
@@ -41,7 +41,7 @@ public class UserRegistraction {
 			System.out.println("Last Name is InValid");
 		}
 	}
-	
+
 	/* UC 3*/
 	public  void validEmailAddress() {
 		System.out.println("Enter the Email Address :");
@@ -50,7 +50,7 @@ public class UserRegistraction {
 		Pattern p = Pattern.compile(lRegex);
 		Matcher m = p.matcher(lName);
 		boolean b = m.matches();
-		
+
 		if(b) {
 			System.out.println("Email Address is Valid");
 		}
@@ -58,7 +58,7 @@ public class UserRegistraction {
 			System.out.println("Email Address InValid");
 		}
 	}
-	
+
 	/* UC 4*/
 	public void validPhoneNumber() {
 		System.out.println("Enter Phone Number");
@@ -67,7 +67,7 @@ public class UserRegistraction {
 		Pattern p = Pattern.compile(pRegex);
 		Matcher m = p.matcher(pNumber);
 		boolean b = m.matches();
-		
+
 		if(b) {
 			System.out.println("Phone Number is Valid");
 		}
@@ -75,9 +75,9 @@ public class UserRegistraction {
 			System.out.println("Phone Number is InValid");
 		}
 	}
-	
+
 	/* UC 5*/
-	
+
 	public void rull_1_Password() {
 		System.out.println("Enter the Password");
 		String rull1 = scan.nextLine();
@@ -85,7 +85,7 @@ public class UserRegistraction {
 		Pattern pattern = Pattern.compile(regex);
 		Matcher m = pattern.matcher(rull1);
 		boolean b = m.matches();
-		
+
 		if(b) {
 			System.out.println("Password is Valid");
 		}
@@ -93,7 +93,7 @@ public class UserRegistraction {
 			System.out.println("Password is InValid");
 		}
 	}
-	
+
 	/* UC 6*/
 	public void rull_2_Password() {
 		System.out.println("Enter the Rull 2 Password");
@@ -102,7 +102,7 @@ public class UserRegistraction {
 		Pattern pattern = Pattern.compile(regex);
 		Matcher m = pattern.matcher(rull2);
 		boolean b = m.matches();
-		
+
 		if(b) {
 			System.out.println("Password is Valid");
 		}
@@ -110,7 +110,7 @@ public class UserRegistraction {
 			System.out.println("Password is Invalid");
 		}
 	}
-	
+
 	/* UC 7 */
 	public void rull_3_Password() {
 		System.out.println("Enter the Rull 3 Password");
@@ -119,7 +119,7 @@ public class UserRegistraction {
 		Pattern pattern = Pattern.compile(regex);
 		Matcher m = pattern.matcher(rull3);
 		boolean b = m.matches();
-		
+
 		if(b) {
 			System.out.println("Password is Valid");
 		}
@@ -127,7 +127,7 @@ public class UserRegistraction {
 			System.out.println("Password is Invalid");
 		}
 	}
-	
+
 	/* UC 8 */
 	public void rull_4_Password() {
 		System.out.println("Enter the Rull 4 Password");
@@ -136,12 +136,30 @@ public class UserRegistraction {
 		Pattern pattern = Pattern.compile(regex);
 		Matcher m = pattern.matcher(rull3);
 		boolean b = m.matches();
-		
+
 		if(b) {
 			System.out.println("Password is Valid");
 		}
 		else {
 			System.out.println("Password is INValid");
 		}	
+	}
+
+
+	/* UC9*/
+	public void sampleEmailsToTest() {
+		System.out.println("Enter the Samples Emails");
+		String sampleEmails = scan.nextLine();
+		String regex = "[a-zA-Z0-9_.]*[-]*[+]*[a-zA-Z0-9]*@[a-zA-Z0-9]+([.][a-zA-Z]+){2,}";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher m = pattern.matcher(sampleEmails);
+		boolean b = m.matches();
+
+		if(b) {
+			System.out.println("Email is Valid");
+		}
+		else {
+			System.out.println("InValid Email");
+		}
 	}
 }
